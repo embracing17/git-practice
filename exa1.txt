@@ -4,10 +4,7 @@ bcbcbcb12xx
 °¡°¡°¡°¡
 243123
 242µ¥ËÄ´ó
-<<<<<<< HEAD
 userÅäÖÃ2312
 usera
 userb
-=======
 userÅäÖÃ
->>>>>>> parent of f418d21... bä¿®æ”¹ä»»æ„commit123
