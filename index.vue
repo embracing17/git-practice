@@ -1,11 +1,6 @@
 <template>
 	<view :class="['businessInfoW', {'ap-filter': !loaded}]">
-		<!-- 商家信息 -->
-		<merchant-info :nickName="nickName" :realName="realName" :avatarUrl="avatarUrl"/>
-		
-		<!-- 商品金额，名称 -->
-		<goods-info :price="price" :goodsPic="firstImageUrl" :goodsName="goodsName" @showDetail="goodsPop = !goodsPop"/>
-
+	
 		<!-- 支付方式 -->
 		<view class="types">
 			<view class="title" v-if="plans.length > 0">
