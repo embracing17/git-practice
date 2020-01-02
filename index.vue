@@ -1,30 +1,7 @@
 <template>
 	<view :class="['businessInfoW', {'ap-filter': !loaded}]">
-	
-		<!-- 支付方式 -->
-		<view class="types">
-			<view class="title" v-if="plans.length > 0">
-				<view class="left">选择支付方式</view>
-				<!-- 未登陆或者已登陆有首单-->
-				<view class="right" v-if="(hasAuth === 'N' || hasAuth === 'Y' && hasCoupon === 'Y') && allPay === 'N'" @tap="discountPop=!discountPop">首单立减10元</view>
-			</view>
-			<view class="payTypeContainer">
-				<view class="item" :class="{active: payType === item.installmentRuleId.toString()}" @tap="onSelectPayType(item.installmentRuleId.toString(), item.allPay)" v-for="item in plans" :key="item.installmentRuleId">
-					<view class="left payType">
-						{{ item.desc.REST_PERIOD }}
-					</view>
-					<view class="middle">
-						<view class="payTitle">{{ formatDesc(item.desc.DOWN_PAY, 'begin') }}</view>
-						<view class="payValue">{{ formatDesc(item.desc.DOWN_PAY, 'end') }}</view>
-					</view>
-					<view class="right">
-						<view class="payTitle" v-if="item.allPay === 'N'">{{ formatDesc(item.desc.REST_PAY, 'begin', item.allPay) }}</view>
-						<view class="payValue" :class="{allPay: item.allPay === 'Y'}">{{ formatDesc(item.desc.REST_PAY, 'end', item.allPay) }}</view>
-					</view>
-					<view class="discount" v-if="(hasAuth === 'N' || hasAuth === 'Y' && hasCoupon === 'Y') && item.allPay === 'N'">立减</view>
-				</view>
-			</view>		
-		</view>
+
+
 
 		<!-- 我同意 -->
 		<view class="agree flexVerticalAlignment" v-if="hasAuth === 'N' || riskStatus !== 'SUC' && allPay === 'N'">
