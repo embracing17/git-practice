@@ -3,20 +3,7 @@
 
 
 
-		<!-- 我同意 -->
-		<view class="agree flexVerticalAlignment" v-if="hasAuth === 'N' || riskStatus !== 'SUC' && allPay === 'N'">
-			<checkbox-group @tap="agreement = !agreement">
-				<label class="flexVerticalAlignment">
-						<view>
-							<checkbox :checked="agreement" color="#017AFF" v-model="agreement" style="transform:scale(0.6);"/>
-						</view>
-						<view>
-							我同意
-						</view>
-				</label>
-			</checkbox-group>
-			<text class="important" @tap.stop="onViewRegister">微花注册协议</text>和<text class="important" @tap.stop="onViewPrivacy">隐私政策</text>
-		</view>
+
 
 		<!-- 申请按钮 -->
 		<view class="btn">
