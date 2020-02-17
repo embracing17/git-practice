@@ -7,3 +7,4 @@ function is(x, y) {
     return x !== x && y !== y;
   }
 }
+var a = 2
